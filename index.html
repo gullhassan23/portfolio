@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Gull Hassan Portfolio</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/ionicons.min.css">
+    
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+
+
+
+<style>
+
+/*======================================
+//--//-->   ABOUT
+======================================*/
+
+.about-mf .box-shadow-full {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.about-mf .about-img {
+  margin-bottom: 2rem;
+}
+
+.about-mf .about-img img {
+  margin-left: 10px;
+}
+
+
+.skill-mf .progress {
+  /* background-color: #cde1f8; */
+  margin: .5rem 0 1.2rem 0;
+  border-radius: 0;
+  height: .7rem;
+}
+
+.skill-mf .progress .progress-bar {
+  height: .7rem;
+  background-color: #ffbd39;
+}
+
+
+/* Animation styles */
+#typing-animation {
+  position: relative;
+  font-size: 30px;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 3s steps(20, end) infinite;
+}
+
+#typing-animation:before {
+  content: "";
+  /* position: absolute; */
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: #ccc;
+  animation: typing-cursor 0.5s ease-in-out infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes typing-cursor {
+  from {
+    width: 5px;
+  }
+  to {
+    width: 0;
+  }
+}
+
+
+/* project image zoom effect */
+
+.zoom-effect {
+  overflow: hidden;
+  transition: transform 0.3s ease-out;
+}
+
+.zoom-effect:hover {
+  transform: scale(1.1);
+}
+
+
+</style>
+
+
+  </head>
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+	  
+	  
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
+	    <div class="container">
+	      <a class="navbar-brand" href="index.html">Gull Hassan</a>
+	      <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
+
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav nav ml-auto">
+	          <li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
+	          <li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
+	          <li class="nav-item"><a href="#resume-section" class="nav-link"><span>Resume</span></a></li>
+	          <li class="nav-item"><a href="#project-section" class="nav-link"><span>Projects</span></a></li>
+	          <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
+	        </ul>
+	      </div>
+	    </div>
+	  </nav>
+	  <section id="home-section" class="hero">
+		  <div class="home-slider  owl-carousel">
+	       <div class="slider-item ">
+	      	<div class="overlay"></div>
+	         <div class="container">
+	          <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
+	          	<div class="one-third js-fullheight order-md-last img" style="background-image:url(images/f-Photoroom.png);  
+				  background-size: contain; 
+				  background-repeat: no-repeat; 
+				  background-position: center;">
+	          	 <div class="overlay"></div>
+	          	</div>
+		          <div class="one-forth d-flex  align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+		          	<div class="text">
+		          		<span class="subheading">Hello!</span>
+			            <h1 class="mb-4 mt-3">I'm <span>Gull Hassan</span></h1>
+
+						<!-- Element to contain animated typing -->
+						<span id="typing-animation"></span>
+						<script>
+							// Initialize the typing animation
+							const typingAnimationElement = document.getElementById('typing-animation');
+
+							// Create an array of typing text
+							const typingTexts = [
+								'Flutter Developer  ',
+								'Hire Me  ',
+							];
+
+							// Function to type text
+							function typeText(text, callback) {
+								let i = 0;
+
+								// Type each character one by one
+								const typingInterval = setInterval(() => {
+									if (i < text.length) {
+										typingAnimationElement.textContent += text[i];
+										i++;
+									} else {
+										clearInterval(typingInterval); // Stop typing
+										if (callback) callback(); // Start backspacing
+									}
+								}, 100); // Typing speed
+							}
+
+							// Function to delete text (reverse typing)
+							function deleteText(callback) {
+								let text = typingAnimationElement.textContent;
+
+								// Delete each character one by one
+								const deletingInterval = setInterval(() => {
+									if (text.length > 0) {
+										text = text.slice(0, -1); // Remove last character
+										typingAnimationElement.textContent = text;
+									} else {
+										clearInterval(deletingInterval); // Stop deleting
+										if (callback) callback(); // Start next text
+									}
+								}, 50); // Deleting speed
+							}
+
+							// Function to manage the typing animation
+							function playTypingAnimation(index = 0) {
+								typeText(typingTexts[index], () => {
+									// After typing is complete, start deleting
+									deleteText(() => {
+										// After deleting, move to the next text
+										const nextIndex = (index + 1) % typingTexts.length;
+										playTypingAnimation(nextIndex);
+									});
+								});
+							}
+
+							// Start the typing animation loop
+							playTypingAnimation();
+						</script>
+
+
+						<br>
+						<br>
+						<h2>Mobile App Developer</h2>
+						
+						<!-- <h2 class="d-flex" style="margin-bottom: 0">With over 5 years of experience</h2> -->
+						<!-- <br> -->
+							<a href="https://github.com/gullhassan23" class="btn btn-white btn-outline-white py-3 px-4">My works</a></p>
+		            </div>
+		          </div>
+	        	</div>
+	        </div>
+	      </div>
+		</div>
+    </section>
+
+
+
+    <section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
+    	<div class="container">
+			<div class="row">
+				<div class="row d-flex align-items-stretch">
+				<!-- <div class="row d-flex"> -->
+					<div class="col-md-6 col-lg-5 d-flex">
+						<div class="img-about img d-flex align-items-stretch">
+							<div class="overlay">
+								<div class="row">
+									<div class="col-sm-6 col-md-5">
+										<div class="about-img">
+											<img src="images/f2.jpg" class="img-fluid rounded b-shadow-a" alt="">
+										</div>
+									</div>
+								
+									<!-- Details next to profile image -->
+									<div class="col-sm-6 col-md-7">
+									  <div class="about-info">
+										<p><span class="title-s">Name: </span> <span>Gull Hassan</span></p>
+										<p><span class="title-s">Job Role: </span> <span>Flutter Developer</span></p>
+										<p><span class="title-s">Experience: </span> <span>1 Years 8 Months</span></p>
+										<p><span class="title-s">Address: </span> <span>Lahore, Pakistan</span></p>
+									  </div>
+									</div>
+								  </div>
+								  <div class="skill-mf">
+									<p class="title-s">Skills</p>
+									<span>oop</span> <span class="pull-right">90%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 95%;"
+											aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+									</div>
+
+									<span>Dart</span> <span class="pull-right">85%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 85%"
+											aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+									</div>
+
+									<span>Flutter</span> <span class="pull-right">90%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 90%"
+											aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+									</div>
+
+									<span>Html</span> <span class="pull-right">85%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 85%"
+											aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+									</div>
+
+									<span>css</span> <span class="pull-right">80%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 80%"
+											aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+									</div>
+								</div>
+								<!-- <div class="skill-mf">
+									<p class="title-s">Skills</p>
+									<span>SQL</span> <span class="pull-right">95%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 95%;" aria-valuenow="95" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>PYTHON</span> <span class="pull-right">85%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>Data Visualization</span> <span class="pull-right">90%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>Statistical Analysis</span> <span class="pull-right">85%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>Machine Learning</span> <span class="pull-right">80%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+								</div> -->
+							</div>
+						</div>
+					</div>
+					
+					<div class="col-md-6 col-lg-7 pl-lg-5 pb-5">
+						<div class="row justify-content-start pb-3">
+							<div class="col-md-12 heading-section ftco-animate">
+								
+								<h1 class="big">About</h1>
+								<h2 class="mb-4">About Me</h2>
+								
+								<p>Proficient Flutter developer with over a year of experience in creating complex, high-performance mobile applications. Skilled in using advanced architectural patterns and building multi-flavored apps to meet diverse user needs. Passionate about delivering user-centric solutions through efficient code and optimized performance.</p>
+								<ul class="about-info mt-4 px-md-0 px-2">
+									<li class="d-flex"><span>Profile:</span> <span>Flutter Development</span>
+									</li>
+									<li class="d-flex"><span>Education:</span> <span>Bachelor of Software
+											Engineering</span></li>
+									<li class="d-flex"><span>Language:</span> <span>English, Urdu</span></li>
+									<li class="d-flex"><span>Interest:</span> <span>Traveling, Swimming,
+										</span></li>
+
+								</ul>
+							</div>
+						</div>
+
+
+						<div class="counter-wrap ftco-animate d-flex mt-md-3">
+							<div class="text">
+								<p class="mb-4">
+									<span class="number" data-number="15">0</span> <span>+</span>
+									<span>&nbsp; Projects completed</span>
+								</p>
+								<p><a href="https://www.linkedin.com/in/gull-hassan-a7990a201/" class="btn btn-primary py-3 px-3">LinkedIn</a></p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+    </section>
+
+
+
+	
+    <section class="ftco-section ftco-no-pb" id="resume-section">
+    	<div class="container">
+    		<div class="row justify-content-center pb-5">
+          <div class="col-md-10 heading-section text-center ftco-animate">
+          	<h1 class="big big-2">Resume</h1>
+            <h2 class="mb-4">Resume</h2>
+            <p>Proficient Flutter developer with over a year of experience in creating complex, high-performance mobile applications. Skilled in using advanced architectural patterns and building multi-flavored apps to meet diverse user needs. Passionate about delivering user-centric solutions through efficient code and optimized performance.</p>
+          </div>
+        </div>
+
+		<div class="row">
+			<h1 class="big-4">Experience</h1>
+			<div class="underline"></div>
+		</div>
+		<br>
+		
+		<div class="col-md-9">
+			<div class="resume-wrap ftco-animate">
+				<span class="date">2023-Present</span>
+				<h2>Flutter Developer</h2>
+				<span class="position">SolutionSoul Pvt. Ltd, Lahore</span>
+				<p class="mt-4">
+				<ul>
+					<li> Developed and maintained complex features for cross-platform mobile applications using Flutter</li>
+					<li>Implemented efficient state management solutions using Getx architecture for large-scale
+						applications</li>
+					<li>Designed and built multi-flavored apps catering to diverse user needs and environments</li>
+					<li>Integrated various data sources including Firebase and REST APIs using https</li>
+					<li>Optimized Flutter code for performance and responsiveness, ensuring a smooth user experience
+					</li>
+					<li>Collaborated effectively with cross-functional teams (designers, backend developers) throughout the
+						development cycle</li>
+					<li>Contributed to code reviews and maintained high coding standards
+					</li>
+				</ul>
+				</p>
+			</div>
+
+		</div>
+				<!-- <div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">2021-Present</span>
+						<h2>Flutter Developer</h2>
+						<span class="position">Merkle</span>
+						<p class="mt-4">Merkle, a leading CXM and media company with over 10K+ professionals globally. It's a part of Dentsu International. 
+							<ul>
+								<li>Analysed ad campaigns, clickstream, and customer surveys data, identified an increasing demand and launched a strategic product line.</li>
+								<li>Developed time series forecasting models to predict sales and optimize marketing budgets, got model performance of 92%.</li>
+								<li>Designed and executed A/B tests, performed rigorous statistical analysis. Led to 20% MoM increase in the conversion rate.</li>
+							</ul>
+						</p>
+					</div>
+
+				</div> -->
+
+			
+			
+
+		<br>
+		<br>
+
+		<div class="row">
+			<h1 class="big-4">Education</h1>
+			<div class="underline"></div>
+		</div>
+		<br>
+		
+		<div class="row">
+			<div class="mx-auto text-center">
+				<div class="resume-wrap ftco-animate">
+					<span class="date">2019-2023</span>
+					<h2>Bechalors In Software Engineeering</h2>
+					<span class="position"> University of Lahore</span>
+				</div>
+			</div>
+
+		</div>
+
+		<div class="row justify-content-center mt-5">
+			<div class="col-md-6 text-center ftco-animate">
+				<p><a href="pdf/gpdf.pdf" class="btn btn-primary py-4 px-5" target="_blank" rel="noopener noreferrer">
+						View CV
+					</a></p>
+			</div>
+		</div>
+
+    		<!-- <div class="row justify-content-center mt-5">
+    			<div class="col-md-6 text-center ftco-animate">
+    				<p><a href="#" class="btn btn-primary py-4 px-5">Download CV</a></p>
+    			</div>
+    		</div> -->
+    	</div>
+    </section>
+
+   
+
+    <section class="ftco-section" id="project-section">
+      <div class="container">
+        <div class="row justify-content-center mb-5 pb-5">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <h1 class="big big-2">Projects</h1>
+            <h2 class="mb-4">Projects</h2>
+            <p>Below are the sample Data Analytics projects on SQL, Python, Power BI & ML.</p>
+          </div>
+        </div>
+        <div class="row d-flex">
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry justify-content-end">
+              <a href="https://github.com/gullhassan23/WholesaleGrocassryStore" class="block-20 zoom-effect" style="background-image: url('images/proj_5.png');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading"><a href="https://github.com/gullhassan23/WholesaleGrocassryStore">
+					Wholesale Grocery store</a></h3>
+                <p>The Wholesale Grocery App is a fully functional application built using Flutter, Firebase, and GetX for state management. The app includes a Stripe integration for card payments. It features two distinct interfaces: Admin Side and User Side. The app includes user authentication, inventory management, and a seamless shopping experience for users.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry justify-content-end">
+              <a href="https://apps.apple.com/pk/app/harooof/id6475778673" class="block-20 zoom-effect" style="background-image: url('images/pic1.png');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading"><a href="https://github.com/gullhassan23/kitabkhana">Haroof</a></h3>
+                <p> This is saudia-Arabia project I developed a cross-platform bookstore app using Dart, featuring personalized recommendations and
+					secure payments via Stripe. It includes robust search functionality and uses Firebase for scalable
+					backend services. The app delivers a seamless experience on both iOS and Android platforms</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry">
+              <a href="https://github.com/gullhassan23/QuranApp" class="block-20 zoom-effect" style="background-image: url('images/calender.PNG');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading"><a href="https://github.com/gullhassan23/QuranApp">Quran App</a></h3>
+                <p> Developed a Quran app using Flutter and Dart, featuring verse translation, audio recitations, advanced
+					search, bookmarking, and note-taking.Integrated GetX, hijri, azhan packages, and API data for Ayat and
+					Surah. Used Firebase for backend services, and designed a customizable user interface.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+	<br>
+		<!-- added justify-content-center to center align the last two projects -->
+		
+	 
+    </section>
+
+	<section class="ftco-section ftco-no-pt ftco-no-pb ftco-counter img" id="section-counter">
+      <div class="container">
+		<div class="row d-md-flex align-items-center">
+          <!-- <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="20">0</strong>
+                <span>Achievements</span>
+              </div>
+            </div>
+          </div> -->
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="15">0</strong>
+                <span>Projects</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="1000">0</strong>
+                <span>Mentored Students</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="500">0</strong>
+                <span>Cups of coffee</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+	
+	  <div class="ftco-section ftco-hireme img margin-top" style="background-image: url(images/bg_1.jpg)">
+			<!-- <div class="container"> -->
+				<div class="row justify-content-center">
+					<div class="col-md-7 ftco-animate text-center">
+						<h2>More projects on<span> Github  </span> </h2>
+						<div class="heading"> <h4> I love to solve business problems &amp; uncover hidden data stories </h4>
+						<br>
+						<p><a href="https://github.com/gullhassan23" class="btn btn-primary py-3 px-5">GitHub</a></p>
+						</div>
+					</div>
+				</div>
+			<!-- </div> -->
+		</div>
+	</section>
+
+
+
+    <section class="ftco-section contact-section ftco-no-pb" id="contact-section">
+      <div class="container">
+      	<div class="row justify-content-center mb-5 pb-3">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <h1 class="big big-2">Contact</h1>
+            <h2 class="mb-4">Contact Me</h2>
+			<p>If you are looking to get a mobile app developed, feel free to reach out to me.</p>
+            <p>Below are the details to reach out to me!</p>
+          </div>
+        </div>
+
+        <div class="row d-flex contact-info mb-5">
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-map-signs"></span>
+          		</div>
+          		<h3 class="mb-4">Address</h3>
+	            <p>Lahore, Pakistan</p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-phone2"></span>
+          		</div>
+          		<h3 class="mb-4">Contact Number</h3>
+	            <p><a href="tel://+92 3351764911">+92 3351764911</a></p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-paper-plane"></span>
+          		</div>
+          		<h3 class="mb-4">Email Address</h3>
+	            <p><a href="mailto:info@yoursite.com">hassanxhan1433@gmail.com</a></p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-globe"></span>
+          		</div>
+          		<h3 class="mb-4">Download Resume</h3>
+	            <p><a href="pdf/gpdf.pdf" download="gpdf.pdf">Hassan Resume</a></p>
+	          </div>
+          </div>
+
+
+		  <div class="container">
+			<br>
+			<br>
+			<div class="row justify-content-center">
+				<div class="col-md-7 ftco-animate text-center">
+					<h2>Hire me </h2>
+					<form id="contact-form" onsubmit="sendEmail(event)" style="margin-top: 20px;">
+						<div class="form-group">
+							<label for="subject" style="font-weight: bold;">Subject:</label>
+							<input type="text" id="subject" name="subject" class="form-control"
+								placeholder="Enter subject" required>
+						</div>
+						<!-- Name Input -->
+						<div class="form-group">
+							<label for="name" style="font-weight: bold;">Name:</label>
+							<input type="text" id="name" name="name" class="form-control"
+								placeholder="Enter your name" required>
+						</div>
+
+						<!-- Email Input -->
+						<div class="form-group">
+							<label for="email" style="font-weight: bold;">Email:</label>
+							<input type="email" id="email" name="email" class="form-control"
+								placeholder="Enter your email" required>
+						</div>
+
+						<!-- Message Input -->
+						<div class="form-group">
+							<label for="message" style="font-weight: bold;">Message:</label>
+							<textarea id="message" name="message" class="form-control" rows="4"
+								placeholder="Write your question here..." required></textarea>
+						</div>
+
+						<!-- Submit Button -->
+						<button type="submit" class="btn btn-primary py-3 px-5">Submit</button>
+					</form>
+				</div>
+
+				<script type="text/javascript">
+					(function () {
+						emailjs.init("YYho98RoQNtBTGT_z"); // Replace with your EmailJS user ID
+					})();
+
+					// Function to send the email using EmailJS
+					function sendEmail(event) {
+						event.preventDefault();  // Prevent the form from refreshing the page
+
+						// Gather the form data
+						const name = document.getElementById('name').value;
+						const email = document.getElementById('email').value;
+						const message = document.getElementById('message').value;
+						const subject = document.getElementById('subject').value;
+
+
+						// Send the form data to your Gmail via EmailJS
+						emailjs.send("service_f3jt84a", "template_1jwt86h", {
+							to_name: "Your Name",
+							subject: subject,// The recipient name, this can be a static name or dynamic
+							from_name: name, // This corresponds to the user's name
+							message: message, // This corresponds to the message the user writes
+							reply_to: email // This sends the user's email as the "reply_to" value
+						})
+							.then(function (response) {
+								console.log("Sent successfully: ", response);
+								alert("Your question has been submitted successfully!");
+							}, function (error) {
+								console.error("Error sending email: ", error);
+								alert("Failed to send your question. Please try again.");
+							});
+					}
+				</script>
+
+
+
+			</div>
+		
+   </div>
+ </section>
+
+
+ 
+	
+ <footer class="ftco-footer ftco-section">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 text-center">
+
+				<p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+					Copyright &copy;
+					<script>document.write(new Date().getFullYear());</script> All rights reserved | This template
+					is made with <i class="icon-heart color-danger" aria-hidden="true"></i> by <a
+						href="https://colorlib.com" target="_blank">Colorlib</a>
+					<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+				</p>
+			</div>
+		</div>
+	</div>
+</footer>
+
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+  <script src="js/jquery.min.js"></script>
+	<script src="js/jquery-migrate-3.0.1.min.js"></script>
+	<script src="js/popper.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/jquery.easing.1.3.js"></script>
+	<script src="js/jquery.waypoints.min.js"></script>
+	<script src="js/jquery.stellar.min.js"></script>
+	<script src="js/owl.carousel.min.js"></script>
+	<script src="js/jquery.magnific-popup.min.js"></script>
+	<script src="js/aos.js"></script>
+	<script src="js/jquery.animateNumber.min.js"></script>
+	<script src="js/scrollax.min.js"></script>
+
+	<script src="js/main.js"></script>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+	
+	<script type="text/javascript">
+		(function () {
+			emailjs.init({
+				publicKey: "YYho98RoQNtBTGT_z",
+			});
+		})();
+	</script>
+
+    
+  </body>
+</html>
